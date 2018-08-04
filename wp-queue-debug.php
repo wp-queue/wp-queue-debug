@@ -146,7 +146,9 @@ class WP_Queue_Debug {
 	 * @return [Array]        : Array of links on plugin page.
 	 */
 	public function plugin_links( $links ) {
-		$settings_link = '<a href="options-general.php?page=wp-queue">The Queue</a>';
+		$settings_link = '<a href="options-general.php?page=wp-queue-debug&tab=failures">Failures</a>';
+		array_unshift( $links, $settings_link );
+		$settings_link = '<a href="options-general.php?page=wp-queue-debug">Jobs Penging</a>';
 		array_unshift( $links, $settings_link );
 		return $links;
 	}

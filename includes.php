@@ -10,5 +10,4 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
 
 /* Include Files Here */
 include_once( 'includes/debug-page.php' );
-include_once( 'includes/failure-page.php' );
-include_once( 'includes/rest-api.php' );
+//include_once( 'includes/rest-api.php' );
