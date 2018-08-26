@@ -151,7 +151,15 @@ class WP_Queue_Debug {
 		return $links;
 	}
 
+	/**
+	 * plugins_loaded function.
+	 * 
+	 * @access public
+	 * @return void
+	 */
 	public function plugins_loaded(){
-		wp_queue()->cron();
+		if( function_exists( 'wp_queue' ) ) {
+			wp_queue()->cron();
+		}
 	}
 }
